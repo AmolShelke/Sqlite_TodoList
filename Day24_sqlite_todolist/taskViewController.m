@@ -34,22 +34,28 @@
 }
 */
 
+
 - (IBAction)saveButton:(id)sender {
     NSString *idText,*nameText;
     idText=self.taskIdtext.text;
     nameText=self.taskNameText.text;
-    NSString *query=[NSString stringWithFormat:@"insert into taskTable(taskId,taskName)values(task1,taskName)"];
+    NSString *query=[NSString stringWithFormat:@"insert into taskTable(Task_id ,Task_name)values(\"%@\",\"%@\")",idText,nameText ];
     int isSuccess=[[Databaselib getSharedObj]executeQuery:query];
     if(isSuccess)
     {
-        NSLog(@"inserted:success");
+        NSLog(@"Insertion Successfully");
+        ViewController *v=[self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        [self.navigationController pushViewController:v animated:YES];
+        
     }
     else
     {
-        NSLog(@"inserted:Failed");
+        NSLog(@"Insertion Failed");
     }
 }
 
 - (IBAction)cancelButton:(id)sender {
+    self.taskIdtext.text=@" ";
+    self.taskNameText.text=@" ";
 }
 @end

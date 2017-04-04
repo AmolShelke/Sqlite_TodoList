@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Databaselib.h"
+#import "ViewController.h"
 @interface taskViewController : UIViewController
 - (IBAction)saveButton:(id)sender;
 - (IBAction)cancelButton:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UITextField *taskIdtext;
 @property (weak, nonatomic) IBOutlet UITextField *taskNameText;
 

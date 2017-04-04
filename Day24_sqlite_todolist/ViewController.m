@@ -43,6 +43,9 @@
 }
 
 
-- (IBAction)newToTask:(id)sender {
+- (IBAction)newToTask:(id)sender
+{
+    taskViewController *tvc=[self.storyboard instantiateViewControllerWithIdentifier:@"taskViewController"];
+    [self.navigationController pushViewController:tvc animated:YES];
 }
 @end

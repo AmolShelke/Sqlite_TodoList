@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="63.418290854572717"/>
+            <point key="canvasLocation" x="860" y="63"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="cCR-T6-DjR">
@@ -91,6 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" red="0.74628407669999997" green="0.96206786860000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4kE-L0-AwS" firstAttribute="leading" secondItem="Xh8-gU-vHP" secondAttribute="leadingMargin" constant="9" id="6E2-yg-9NS"/>
                             <constraint firstItem="qNg-Ml-DCq" firstAttribute="top" secondItem="fOt-Cr-dyM" secondAttribute="bottom" constant="200" id="819-gB-2ih"/>
@@ -111,20 +112,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kEj-tV-GWg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Her-51-7hg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Tec-rP-A9A">
                             <connections>
-                                <action selector="cancelButton:" destination="KhH-Nf-iRC" id="bN2-KO-eIt"/>
+                                <action selector="cancelButton:" destination="KhH-Nf-iRC" id="BTz-b8-egu"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZKX-gH-kQX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7Qv-9e-ugZ">
                             <connections>
-                                <action selector="saveButton:" destination="KhH-Nf-iRC" id="3YJ-MW-rUH"/>
+                                <action selector="saveButton:" destination="KhH-Nf-iRC" id="CXp-tg-tvj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancelButton" destination="Her-51-7hg" id="vFh-po-Nw2"/>
-                        <outlet property="saveButton" destination="ZKX-gH-kQX" id="guc-2f-5SZ"/>
                         <outlet property="taskIdtext" destination="qNg-Ml-DCq" id="NRs-ur-c9y"/>
                         <outlet property="taskNameText" destination="f98-pd-oBJ" id="XC2-3K-MIO"/>
                     </connections>
